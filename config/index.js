@@ -43,6 +43,21 @@ module.exports = {
         changeOrigin: true,
         pathRewrite: {
           "^/img3": ""
+        },
+
+        "/dianying": {
+          target: "https://www.iqiyi.com/dianying_new",
+          changeOrigin: true,
+          pathRewrite: {
+            "^/dianying": ""
+          },
+
+          "qileyun":{
+            target: " http://jk.qileyun.cn",
+            changeOrigin: true,
+            pathRewrite: {
+              "^/qileyun": ""
+          }
         }
       }
     },
