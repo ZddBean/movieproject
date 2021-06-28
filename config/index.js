@@ -11,7 +11,7 @@ module.exports = {
     assetsPublicPath: "/",
     proxyTable: {
       "/api": {
-        target: "https://movie.douban.com",
+        target: "https://pcw-api.iqiyi.com",
         changeOrigin: true,
         pathRewrite: {
           "^/api": ""
@@ -52,11 +52,12 @@ module.exports = {
             "^/dianying": ""
           },
 
-          "qileyun":{
+          qileyun: {
             target: " http://jk.qileyun.cn",
             changeOrigin: true,
             pathRewrite: {
               "^/qileyun": ""
+            }
           }
         }
       }
