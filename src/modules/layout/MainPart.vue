@@ -3,8 +3,8 @@
     <ul>
       <li class="unit" v-for="(item, index) in dataList" :key="index">
         <div class="itemPer">
-          <div class="cover" @click="clickEvent(item.title)">
-            <img :src="item.imageUrl" alt="" />
+          <div class="cover">
+            <img :src="item.imageUrl" alt="" @click="clickEvent(item)" />
           </div>
           <span>{{ item.description }}</span>
         </div>
@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import AutoShrink from "pingansec-auto-shrink";
 export default {
   data() {
     return {
@@ -26,20 +25,18 @@ export default {
       inputValue: "",
     };
   },
+
   mounted() {
     this.getHotMovieList();
-    //this.idEvebt();
   },
   methods: {
-    idEvebt() {
-      //非vue 省略这行
-
-      AutoShrink.adjust(document.querySelector("#test"), {
-        maxSize: 200,
-      });
-    },
     clickEvent(val) {
-      // alert(val);
+      this.$store.commit("setMovieUrl", val.pageUrl);
+      this.$store.commit("setMovieName", val.name);
+      console.log(val);
+      this.$router.push({
+        path: "/movie",
+      });
     },
     // 获取热门电影列表
     getHotMovieList() {

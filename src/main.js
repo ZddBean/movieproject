@@ -8,6 +8,7 @@ Vue.config.productionTip = false;
 import ElementUI from "element-ui";
 import axios from "axios";
 import regComponents from "@common/reg-components";
+import store from "./store/store.js";
 
 Vue.prototype.$http = axios;
 import "element-ui/lib/theme-chalk/index.css";
@@ -18,6 +19,7 @@ Vue.use(regComponents);
 new Vue({
   el: "#app",
   router,
+  store,
   components: { App },
   template: "<App/>"
 });
