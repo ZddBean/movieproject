@@ -7,10 +7,12 @@ import router from "./router";
 Vue.config.productionTip = false;
 import ElementUI from "element-ui";
 import axios from "axios";
+import regComponents from "@common/reg-components";
 
 Vue.prototype.$http = axios;
 import "element-ui/lib/theme-chalk/index.css";
 Vue.use(ElementUI);
+Vue.use(regComponents);
 
 /* eslint-disable no-new */
 new Vue({
