@@ -39,7 +39,10 @@ export default {
       videoUrl: "",
       selectValue: "",
       selectArr: [
-        { name: "默认", value: "https://z1.m1907.cn/?jx=" },
+        {
+          name: "默认",
+          value: "https://www.qianyicp.com/jiexi/index.php?url=",
+        }, // 清晰
         { name: "618G", value: "https://jx.618g.com/?url=" },
         { name: "OK", value: "https://okjx.cc/?url=" },
         { name: "1717云", value: "https://jx.ab33.top/vip/?url=" },
@@ -47,6 +50,14 @@ export default {
         { name: "58", value: "https://jx.km58.top/jx/?url=" },
         { name: "180", value: "https://jx.000180.top/jx/?url=" },
         { name: "狂野", value: "https://api.653520.top/vip/?url=" },
+        {
+          name: "清晰一点",
+          value: "http://jx.awx88.cn/jiexi/?url=",
+        },
+        {
+          name: "换一个",
+          value: "https://www.qianyicp.com/jiexi/index.php?url=",
+        },
       ],
     };
   },
